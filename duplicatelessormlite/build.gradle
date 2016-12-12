@@ -1,5 +1,21 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'duplicateless-orm-lite'
+
+    publishedGroupId = 'com.github.mikeherasimov'
+    libraryName = 'DuplicatelessORMLite'
+    artifact = 'duplicatelessormlite'
+
+    libraryDescription = 'Duplicateless creation of new records for ORM Lite'
+    libraryVersion = '0.1'
+
+    developerId = 'mikeherasimov'
+    developerName = 'Mike Herasimov'
+    developerEmail = '21jhonnycash@gmail.com'
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
@@ -24,3 +40,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.j256.ormlite:ormlite-android:5.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
